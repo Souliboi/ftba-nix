@@ -35,15 +35,15 @@
 , jdk8
 }:
 
+let
+  # somehow replace $(version) with $(pkgver) 
+  # [replace from the ftba AUR package is ${pkgver//_/-}]
+  # and i have no idea how to do this
+in
+
 stdenv.mkDerivation rec {
   name = "ftb-app";
   version = "202310071959_918caed003";
-
-  let
-    # somehow replace $(version) with $(pkgver) 
-    # [replace from the ftba AUR package is ${pkgver//_/-}]
-    # and i have no idea how to do this
-  in
 
   src = fetchurl {
     url = "htpps://apps.modpacks.ch/FTBApp/release/$(version)/FTBA_linux_$(version).deb";
