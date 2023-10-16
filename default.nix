@@ -56,6 +56,7 @@ stdenv.mkDerivation rec {
     description = "FTB App for Linux to manage your Minecraft Modpacks";
     homepage = "https://www.feed-the-beast.com/ftb-app";
     platforms = with platforms; linux;
+    license = licenses.lgpl21;
     maintainers = with maintainers; [ souliboi ];
   };
 }
